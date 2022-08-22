@@ -12,7 +12,7 @@ export class Review {
   email: string;
 
   @Column({ nullable: true, type: 'text' })
-  attachments: any;
+  attachments: String[];
 
   @Column()
   date: Date;

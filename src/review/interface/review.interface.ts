@@ -1,5 +1,6 @@
 export class  ReviewInterface {
     id?: number;
     comment: string;
-    email?: any
+    email?: string;
+    attachents: any
 }

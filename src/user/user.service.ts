@@ -1,10 +1,9 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository, getRepository } from 'typeorm';
+import { Repository} from 'typeorm';
 import { User } from './entities/user.entity';
 import { Errormessage } from 'src/Errormessage';
 import { CreateUserDto } from './dto/user.dto';
-import { UserInterface } from './interface/user.interface';
 import * as bcrypt from 'bcrypt';
 import * as jwt from 'jsonwebtoken';
 
@@ -60,6 +59,7 @@ export class UserService {
           const secret = process.env.JWT_SECRET;
           const token = jwt.sign(payload, secret, options)
           return { 
+              responseCode: 200,
               success: true, 
               accessToken: token 
           };
