@@ -22,7 +22,7 @@ export class UserService {
       try {
         const userExist = await this.userModel.findOneBy({
           email: userDto.email.toLowerCase()
-        }) 
+        });
         if(!userExist) {
           const user = await this.userModel.create({
             email: userDto.email.toLowerCase(),
