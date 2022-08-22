@@ -17,4 +17,4 @@ export const Errormessage = {
         apiErrorCode: '401',
         errorMessage: 'Token has either expired or not provided'
     },
-}
+};
