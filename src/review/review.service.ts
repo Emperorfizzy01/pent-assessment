@@ -29,7 +29,7 @@ export class ReviewService {
             return {
               responseCode: 200,
               success: true,
-              uri: `localhost:3000/${filename}`
+              uri: `https://pent-assessment.herokuapp.com/${filename}`
             };
           });
         } catch(err) {
